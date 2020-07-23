@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title></title>
+
+	<!-- <css> -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/modernizr-minified.js"></script>
+</head>
+
+<body>
+	<div id="shape"></div>
+	<div id="videoContainer">
+		<!-- <video class="video" width="300" height="300" muted>
+			<source src="videos/shapes.mp4" type="video/mp4">
+
+						<video id="video" controls muted preload src="videos/shapes.mp4" type="video/mp4"></video>
+
+		</video> -->
+
+		<video id="video" muted preload type="video/mp4">
+			<source src="videos/shapes.mp4" type="video/webm">
+		</video>
+	</div>
+	<!--end container-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+
+	<script>
+		var $video = $('#video');
+		var $shape = $('#shape');
+
+		$shape.on('mouseover focus', function () {
+			$video.get(0).play();
+		});
+	</script>
+
+</body>
+
+</html>
